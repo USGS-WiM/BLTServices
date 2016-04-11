@@ -68,8 +68,12 @@ namespace BLTServices.Authentication
                 
             }//next
 
-           
-            if (!isAuthorized)  _context.OperationResult = new OperationResult.Unauthorized();
+
+            if (!isAuthorized)
+            {
+                _context.Response.Headers.Remove("Authentication");
+                _context.OperationResult = new OperationResult.Unauthorized();
+            }
             
             return isAuthorized;
         }

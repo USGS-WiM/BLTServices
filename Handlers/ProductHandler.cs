@@ -361,6 +361,10 @@ namespace BLTServices.Handlers
         [HttpOperation(HttpMethod.POST)]
         public OperationResult POST(PRODUCT anEntity)
         {
+            //Return BadRequest if missing required fields
+            if (string.IsNullOrEmpty(anEntity.PRODUCT_REGISTRATION_NUMBER) || string.IsNullOrEmpty(anEntity.PRODUCT_NAME))
+                return new OperationResult.BadRequest();
+
             anEntity.PRODUCT_NAME = anEntity.PRODUCT_NAME.ToUpper();
 
             try
@@ -379,7 +383,21 @@ namespace BLTServices.Handlers
                             aBLTE.PRODUCT.AddObject(anEntity);
 
                             aBLTE.SaveChanges();
-                        }//end if
+                        }
+                        else
+                        {//it exists, check if expired
+                            if (anEntity.VERSION.EXPIRED_TIME_STAMP.HasValue)
+                            {
+                                PRODUCT newP = new PRODUCT();
+                                newP.PRODUCT_NAME = anEntity.PRODUCT_NAME;
+                                newP.PRODUCT_REGISTRATION_NUMBER = anEntity.PRODUCT_REGISTRATION_NUMBER;
+                                newP.VERSION_ID = SetVersion(aBLTE, newP.VERSION_ID, LoggedInUser(aBLTE).USER_ID, StatusType.Published, DateTime.Now.Date).VERSION_ID;
+                                newP.PRODUCT_ID = anEntity.PRODUCT_ID;
+                                //anEntity.ID = 0;
+                                aBLTE.PRODUCT.AddObject(newP);
+                                aBLTE.SaveChanges();
+                            }//end if
+                        }//end if//end if//end if
 
                         activateLinks<PRODUCT>(anEntity); 
                     }//end using
