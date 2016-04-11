@@ -1682,6 +1682,30 @@ namespace BLTServices
         private global::System.String _SEC18;
         partial void OnSEC18Changing(global::System.String value);
         partial void OnSEC18Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String INTERIM_DECISION
+        {
+            get
+            {
+                return _INTERIM_DECISION;
+            }
+            set
+            {
+                OnINTERIM_DECISIONChanging(value);
+                ReportPropertyChanging("INTERIM_DECISION");
+                _INTERIM_DECISION = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("INTERIM_DECISION");
+                OnINTERIM_DECISIONChanged();
+            }
+        }
+        private global::System.String _INTERIM_DECISION;
+        partial void OnINTERIM_DECISIONChanging(global::System.String value);
+        partial void OnINTERIM_DECISIONChanged();
 
         #endregion
     

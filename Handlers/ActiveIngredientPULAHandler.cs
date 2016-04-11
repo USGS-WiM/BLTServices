@@ -686,6 +686,7 @@ namespace BLTServices.Handlers
                             aPULA.SEC24 = anEntity.SEC24;
                             aPULA.FINAL_DECISION = anEntity.FINAL_DECISION;
                             aPULA.SEC18 = anEntity.SEC18;
+                            aPULA.INTERIM_DECISION = anEntity.INTERIM_DECISION;
 
                         }// end if
 

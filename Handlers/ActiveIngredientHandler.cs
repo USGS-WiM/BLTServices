@@ -300,6 +300,22 @@ namespace BLTServices.Handlers
                             aBLTE.ACTIVE_INGREDIENT.AddObject(anEntity);
 
                             aBLTE.SaveChanges();
+                        }
+                        else
+                        {
+                            //it exists, check if expired
+                            if (anEntity.VERSION.EXPIRED_TIME_STAMP.HasValue)
+                            {
+                                ACTIVE_INGREDIENT newAI = new ACTIVE_INGREDIENT();
+                                newAI.INGREDIENT_NAME = anEntity.INGREDIENT_NAME;
+                                newAI.PC_CODE = anEntity.PC_CODE;
+                                newAI.CAS_NUMBER = anEntity.CAS_NUMBER;
+                                newAI.VERSION_ID = SetVersion(aBLTE, newAI.VERSION_ID, LoggedInUser(aBLTE).USER_ID, StatusType.Published, DateTime.Now.Date).VERSION_ID;
+                                newAI.ACTIVE_INGREDIENT_ID = anEntity.ACTIVE_INGREDIENT_ID;
+                                //anEntity.ID = 0;
+                                aBLTE.ACTIVE_INGREDIENT.AddObject(newAI);
+                                aBLTE.SaveChanges();
+                            }
                         }//end if
 
                         activateLinks<ACTIVE_INGREDIENT>(anEntity);                       

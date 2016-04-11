@@ -24,12 +24,7 @@
           <EntitySet Name="SPECIES_ACTIVE_INGREDIENT_PULA" EntityType="BLTRDSModel.Store.SPECIES_ACTIVE_INGREDIENT_PULA" store:Type="Tables" Schema="BLTADMIN" />
           <EntitySet Name="USER_" EntityType="BLTRDSModel.Store.USER_" store:Type="Tables" Schema="BLTADMIN" />
           <EntitySet Name="VERSION" EntityType="BLTRDSModel.Store.VERSION" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="CONTRIBUTORPULAVIEW" EntityType="BLTRDSModel.Store.CONTRIBUTORPULAVIEW" store:Type="Views" store:Schema="BLTADMIN" store:Name="CONTRIBUTORPULAVIEW">
-            <DefiningQuery>SELECT 
-      "CONTRIBUTORPULAVIEW"."ID" AS "ID", 
-      "CONTRIBUTORPULAVIEW"."COMMENTS" AS "COMMENTS"
-      FROM "BLTADMIN"."CONTRIBUTORPULAVIEW" "CONTRIBUTORPULAVIEW"</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="CONTRIBUTORPULAVIEW" EntityType="BLTRDSModel.Store.CONTRIBUTORPULAVIEW" store:Type="Views" Schema="BLTADMIN" />
           <EntitySet Name="PULAVERSION" EntityType="BLTRDSModel.Store.PULAVERSION" store:Type="Views" store:Schema="BLTADMIN" store:Name="PULAVERSION">
             <DefiningQuery>SELECT 
       "PULAVERSION"."PULA_ID" AS "PULA_ID", 
@@ -71,7 +66,7 @@
           <Property Name="OTHER_JUSTIFICATION" Type="nvarchar2" MaxLength="1000" />
           <Property Name="BASE_DATA" Type="nvarchar2" MaxLength="1000" />
           <Property Name="BASE_DATA_MODIFIERS" Type="nvarchar2" MaxLength="1000" />
-          <Property Name="ADDITIONAL_INFORMATION" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="ADDITIONAL_INFORMATION" Type="nvarchar2" />
           <Property Name="INTERIM_PROPOSED_DECISION" Type="nvarchar2" MaxLength="500" />
           <Property Name="FOCUS_MEETING" Type="nvarchar2" MaxLength="500" />
           <Property Name="BIOLOGICAL_OPINION_REGREVIEW" Type="nvarchar2" MaxLength="500" />
@@ -88,6 +83,7 @@
           <Property Name="SEC24" Type="nvarchar2" MaxLength="500" />
           <Property Name="FINAL_DECISION" Type="nvarchar2" MaxLength="500" />
           <Property Name="SEC18" Type="nvarchar2" MaxLength="500" />
+          <Property Name="INTERIM_DECISION" Type="varchar2" MaxLength="500" />
         </EntityType>
         <EntityType Name="AI_CLASS">
           <Key>
@@ -105,7 +101,7 @@
           <Property Name="APPLICATION_METHOD_ID" Type="number" Nullable="false" />
           <Property Name="METHOD" Type="nvarchar2" Nullable="false" MaxLength="100" />
           <Property Name="VERSION_ID" Type="number" Nullable="false" />
-          <Property Name="ID" Type="number" Nullable="false" />
+          <Property Name="ID" Type="number" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="CROP_USE">
           <Key>
@@ -137,7 +133,7 @@
           <Property Name="FORMULATION_ID" Type="number" Nullable="false" />
           <Property Name="FORM" Type="nvarchar2" Nullable="false" MaxLength="100" />
           <Property Name="VERSION_ID" Type="number" Nullable="false" />
-          <Property Name="ID" Type="number" Nullable="false" />
+          <Property Name="ID" Type="number" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="LIMITATIONS">
           <Key>
@@ -242,7 +238,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="number" Nullable="false" />
+          <Property Name="ID" Type="number" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="COMMENTS" Type="nvarchar2" MaxLength="500" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -401,6 +397,7 @@
           </AssociationSet>
           <EntitySet Name="PULAVERSIONs" EntityType="BLTRDSModel.PULAVERSION" />
           <EntitySet Name="CONTRIBUTORPULAVIEWs" EntityType="BLTRDSModel.CONTRIBUTORPULAVIEW" />
+          
         </EntityContainer>
         <EntityType Name="ACTIVE_INGREDIENT">
           <Key>
@@ -693,7 +690,7 @@
           <Property Type="Decimal" Name="PULA_SHAPE_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="String" Name="BASE_DATA" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="BASE_DATA_MODIFIERS" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="ADDITIONAL_INFORMATION" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ADDITIONAL_INFORMATION" MaxLength="2000" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="INTERIM_PROPOSED_DECISION" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FOCUS_MEETING" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
@@ -713,6 +710,7 @@
           <Property Type="String" Name="SEC24" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FINAL_DECISION" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="SEC18" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="INTERIM_DECISION" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="VERSIONACTIVE_INGREDIENT_PULA">
           <End Type="BLTRDSModel.VERSION" Role="VERSION" Multiplicity="1" />
@@ -755,7 +753,7 @@
           <Property Type="Decimal" Name="APPLICATION_METHOD_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="String" Name="METHOD" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONAPPLICATION_METHOD" FromRole="APPLICATION_METHOD" ToRole="VERSION" />
         </EntityType>
         <EntityType Name="FORMULATION">
@@ -765,7 +763,7 @@
           <Property Type="Decimal" Name="FORMULATION_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="String" Name="FORM" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONFORMULATION" FromRole="FORMULATION" ToRole="VERSION" />
         </EntityType>
         <Association Name="VERSIONAPPLICATION_METHOD">
@@ -879,9 +877,9 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="COMMENTS" MaxLength="500" FixedLength="false" Unicode="true" />
-        </EntityType>
+        </EntityType>        
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -988,6 +986,7 @@
           <EntitySetMapping Name="ACTIVE_INGREDIENT_PULA">
             <EntityTypeMapping TypeName="BLTRDSModel.ACTIVE_INGREDIENT_PULA">
               <MappingFragment StoreEntitySet="ACTIVE_INGREDIENT_PULA">
+                <ScalarProperty Name="INTERIM_DECISION" ColumnName="INTERIM_DECISION" />
                 <ScalarProperty Name="SEC18" ColumnName="SEC18" />
                 <ScalarProperty Name="FINAL_DECISION" ColumnName="FINAL_DECISION" />
                 <ScalarProperty Name="SEC24" ColumnName="SEC24" />
@@ -1096,7 +1095,7 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
-          </EntitySetMapping>
+          </EntitySetMapping>         
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1224,6 +1223,7 @@
         </AssociationConnector>
         <EntityTypeShape EntityType="BLTRDSModel.PULAVERSION" Width="2.25" PointX="9.75" PointY="1" Height="2.1725878906250031" />
         <EntityTypeShape EntityType="BLTRDSModel.CONTRIBUTORPULAVIEW" Width="2.25" PointX="0.75" PointY="3.75" Height="1.4033821614583388" />
+        <EntityTypeShape EntityType="BLTRDSModel.CONTRIBUTORPULAVIEW" Width="1.5" PointX="0.75" PointY="3.75" Height="1.4033821614583388" />
         </Diagram>
     </Diagrams>
   </Designer>

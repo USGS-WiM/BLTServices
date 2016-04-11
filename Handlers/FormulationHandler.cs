@@ -280,7 +280,20 @@ namespace BLTServices.Handlers
                             aBLTE.FORMULATION.AddObject(anEntity);
 
                             aBLTE.SaveChanges();
-                        }//end if
+                        }
+                        else
+                        {//it exists, check if expired
+                            if (anEntity.VERSION.EXPIRED_TIME_STAMP.HasValue)
+                            {
+                                FORMULATION newF = new FORMULATION();
+                                newF.FORM = anEntity.FORM;
+                                newF.VERSION_ID = SetVersion(aBLTE, newF.VERSION_ID, LoggedInUser(aBLTE).USER_ID, StatusType.Published, DateTime.Now.Date).VERSION_ID;
+                                newF.FORMULATION_ID = anEntity.FORMULATION_ID;
+                                //anEntity.ID = 0;
+                                aBLTE.FORMULATION.AddObject(newF);
+                                aBLTE.SaveChanges();
+                            }//end if
+                        }//end if//end if
 
                         activateLinks<FORMULATION>(anEntity);
                     }//end using

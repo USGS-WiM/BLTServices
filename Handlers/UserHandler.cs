@@ -264,23 +264,17 @@ namespace BLTServices.Handlers
                     USER_ ObjectToBeUpdated = aBLTE.USER_.Single(m => m.USER_ID == userID);
                     
                     //FirstName
-                    ObjectToBeUpdated.FNAME = (string.IsNullOrEmpty(aUser.FNAME) ?
-                        ObjectToBeUpdated.FNAME : aUser.FNAME);
+                    ObjectToBeUpdated.FNAME = aUser.FNAME;
                     //Last Name
-                    ObjectToBeUpdated.LNAME = (string.IsNullOrEmpty(aUser.LNAME) ?
-                        ObjectToBeUpdated.LNAME : aUser.LNAME);
+                    ObjectToBeUpdated.LNAME = aUser.LNAME;
                     //OrganizationID
-                    ObjectToBeUpdated.ORGANIZATION_ID = (Decimal.Equals(aUser.ORGANIZATION_ID, ObjectToBeUpdated.ORGANIZATION_ID) ?
-                        ObjectToBeUpdated.ORGANIZATION_ID : aUser.ORGANIZATION_ID);
+                    ObjectToBeUpdated.ORGANIZATION_ID = aUser.ORGANIZATION_ID;
                     //DivisionID
-                    ObjectToBeUpdated.DIVISION_ID = (Decimal.Equals(aUser.DIVISION_ID, ObjectToBeUpdated.DIVISION_ID) ?
-                        ObjectToBeUpdated.DIVISION_ID : aUser.DIVISION_ID);
+                    ObjectToBeUpdated.DIVISION_ID = aUser.DIVISION_ID;
                     //Phone
-                    ObjectToBeUpdated.PHONE = (string.IsNullOrEmpty(aUser.PHONE) ?
-                        ObjectToBeUpdated.PHONE : aUser.PHONE);
+                    ObjectToBeUpdated.PHONE = aUser.PHONE;
                     //Email
-                    ObjectToBeUpdated.EMAIL = (string.IsNullOrEmpty(aUser.EMAIL) ?
-                        ObjectToBeUpdated.EMAIL : aUser.EMAIL);
+                    ObjectToBeUpdated.EMAIL = aUser.EMAIL;
 
                     aBLTE.SaveChanges();
 

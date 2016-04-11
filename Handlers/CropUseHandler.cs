@@ -285,6 +285,19 @@ namespace BLTServices.Handlers
                             aBLTE.CROP_USE.AddObject(anEntity);
 
                             aBLTE.SaveChanges();
+                        }
+                        else
+                        {//it exists, check if expired
+                            if (anEntity.VERSION.EXPIRED_TIME_STAMP.HasValue)
+                            {
+                                CROP_USE newCU = new CROP_USE();
+                                newCU.USE = anEntity.USE;
+                                newCU.VERSION_ID = SetVersion(aBLTE, newCU.VERSION_ID, LoggedInUser(aBLTE).USER_ID, StatusType.Published, DateTime.Now.Date).VERSION_ID;
+                                newCU.CROP_USE_ID = anEntity.CROP_USE_ID;
+                                //anEntity.ID = 0;
+                                aBLTE.CROP_USE.AddObject(newCU);
+                                aBLTE.SaveChanges();
+                            }//end if
                         }//end if
 
                         activateLinks<CROP_USE>(anEntity); 

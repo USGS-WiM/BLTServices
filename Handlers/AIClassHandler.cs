@@ -283,16 +283,30 @@ namespace BLTServices.Handlers
                 {
                     using (BLTRDSEntities aBLTE = GetRDS(securedPassword))
                     {
-                        if(!Exists(aBLTE, ref anEntity))
+                        if (!Exists(aBLTE, ref anEntity))
                         {
                             //create version
                             anEntity.VERSION_ID = SetVersion(aBLTE, anEntity.VERSION_ID, LoggedInUser(aBLTE).USER_ID, StatusType.Published, DateTime.Now.Date).VERSION_ID;
 
                             anEntity.AI_CLASS_ID = GetNextID(aBLTE);
-                       
+
                             aBLTE.AI_CLASS.AddObject(anEntity);
 
                             aBLTE.SaveChanges();
+                        }
+                        else
+                        {
+                            //it exists, check if expired
+                            if (anEntity.VERSION.EXPIRED_TIME_STAMP.HasValue)
+                            {
+                                AI_CLASS newAIClass = new AI_CLASS();
+                                newAIClass.AI_CLASS_NAME = anEntity.AI_CLASS_NAME;
+                                newAIClass.VERSION_ID =  SetVersion(aBLTE, newAIClass.VERSION_ID, LoggedInUser(aBLTE).USER_ID, StatusType.Published, DateTime.Now.Date).VERSION_ID;
+                                newAIClass.AI_CLASS_ID = anEntity.AI_CLASS_ID;
+                                //anEntity.ID = 0;
+                                aBLTE.AI_CLASS.AddObject(newAIClass);
+                                aBLTE.SaveChanges();
+                            }
                         }
                         activateLinks<AI_CLASS>(anEntity);
                     }//end using
@@ -434,9 +448,6 @@ namespace BLTServices.Handlers
                     //NOTE: ShapeID can not be changed
                     if (ObjectToBeDelete.VERSION.PUBLISHED_TIME_STAMP.HasValue)
                     {
-                        //set the date to be first of following month 
-                        //int nextMo = DateTime.Now.Month + 1;
-                        //DateTime nextMonth = Convert.ToDateTime(nextMo + "/01/" + DateTime.Now.Year);
                         ObjectToBeDelete.VERSION_ID = SetVersion(ObjectToBeDelete.VERSION_ID, LoggedInUser(aBLTE).USER_ID, StatusType.Expired, DateTime.Now.Date).VERSION_ID;
                     }
                     else

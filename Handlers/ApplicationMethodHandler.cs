@@ -289,8 +289,20 @@ namespace BLTServices.Handlers
                             aBLTE.APPLICATION_METHOD.AddObject(anEntity);
 
                             aBLTE.SaveChanges();
-                        }//end if
-
+                        }
+                        else
+                        {//it exists, check if expired
+                            if (anEntity.VERSION.EXPIRED_TIME_STAMP.HasValue)
+                            {
+                                APPLICATION_METHOD newAM = new APPLICATION_METHOD();
+                                newAM.METHOD = anEntity.METHOD;
+                                newAM.VERSION_ID = SetVersion(aBLTE, newAM.VERSION_ID, LoggedInUser(aBLTE).USER_ID, StatusType.Published, DateTime.Now.Date).VERSION_ID;
+                                newAM.APPLICATION_METHOD_ID = anEntity.APPLICATION_METHOD_ID;
+                                //anEntity.ID = 0;
+                                aBLTE.APPLICATION_METHOD.AddObject(newAM);
+                                aBLTE.SaveChanges();
+                            }//end if
+                        }
                         activateLinks<APPLICATION_METHOD>(anEntity);
                     }//end using
                 }//end using

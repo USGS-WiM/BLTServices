@@ -269,7 +269,7 @@ namespace BLTServices.Handlers
                         loggedInUser = LoggedInUser(aBLTE);
 
                         //get pulaID
-                        anAIPULA = aBLTE.ACTIVE_INGREDIENT_PULA.FirstOrDefault(ai => ai.ID == entityID);
+                        anAIPULA = aBLTE.ACTIVE_INGREDIENT_PULA.FirstOrDefault(ai => ai.PULA_ID == entityID);
                         if (anAIPULA == null)
                         { return new OperationResult.NoContent(); }
 
