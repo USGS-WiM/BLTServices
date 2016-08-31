@@ -41,6 +41,7 @@ using Newtonsoft.Json;
 
 #endregion
 
+
 namespace BLTServices
 {
     #region Contexts
@@ -410,6 +411,7 @@ namespace BLTServices
         private ObjectSet<CONTRIBUTORPULAVIEW> _CONTRIBUTORPULAVIEWs;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -573,6 +575,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Function Imports
     
         /// <summary>
@@ -715,10 +718,12 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
 
     #endregion
+
     
     #region Entities
     
@@ -750,6 +755,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -900,6 +906,7 @@ namespace BLTServices
         partial void OnIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -943,6 +950,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -973,6 +981,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1075,6 +1084,7 @@ namespace BLTServices
         partial void OnVERSION_IDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1118,6 +1128,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1150,6 +1161,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1708,6 +1720,7 @@ namespace BLTServices
         partial void OnINTERIM_DECISIONChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1790,6 +1803,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1820,6 +1834,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1922,6 +1937,7 @@ namespace BLTServices
         partial void OnIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1965,6 +1981,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1995,6 +2012,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2097,6 +2115,7 @@ namespace BLTServices
         partial void OnIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2140,6 +2159,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2164,6 +2184,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2218,6 +2239,7 @@ namespace BLTServices
         partial void OnCOMMENTSChanged();
 
         #endregion
+
     
     }
     
@@ -2249,6 +2271,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2351,6 +2374,7 @@ namespace BLTServices
         partial void OnIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2394,6 +2418,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2420,6 +2445,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2474,6 +2500,7 @@ namespace BLTServices
         partial void OnDIVISION_NAMEChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2501,6 +2528,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2527,6 +2555,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2581,6 +2610,7 @@ namespace BLTServices
         partial void OnNAMEChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2608,6 +2638,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2638,6 +2669,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2740,6 +2772,7 @@ namespace BLTServices
         partial void OnIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2783,6 +2816,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2813,6 +2847,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2939,6 +2974,7 @@ namespace BLTServices
         partial void OnIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2982,6 +3018,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3008,6 +3045,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3062,6 +3100,7 @@ namespace BLTServices
         partial void OnNAMEChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3089,6 +3128,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3119,6 +3159,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3269,6 +3310,7 @@ namespace BLTServices
         partial void OnPRODUCT_NAME_STATUSChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3312,6 +3354,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3342,6 +3385,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3444,6 +3488,7 @@ namespace BLTServices
         partial void OnVERSION_IDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3487,6 +3532,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3515,6 +3561,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3737,6 +3784,7 @@ namespace BLTServices
         partial void OnPRODUCT_IDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3780,6 +3828,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3808,6 +3857,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3988,6 +4038,7 @@ namespace BLTServices
         partial void OnPULA_IDChanged();
 
         #endregion
+
     
     }
     
@@ -4015,6 +4066,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4093,6 +4145,7 @@ namespace BLTServices
         partial void OnROLE_DESCRIPTIONChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4120,6 +4173,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4150,6 +4204,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4252,6 +4307,7 @@ namespace BLTServices
         partial void OnVERSION_IDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4295,6 +4351,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4321,6 +4378,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4543,6 +4601,7 @@ namespace BLTServices
         partial void OnLNAMEChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4733,6 +4792,7 @@ namespace BLTServices
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4757,6 +4817,7 @@ namespace BLTServices
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4979,6 +5040,7 @@ namespace BLTServices
         partial void OnREVIEWED_TIME_STAMPChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5376,8 +5438,10 @@ namespace BLTServices
         }
 
         #endregion
+
     }
 
     #endregion
+
     
 }

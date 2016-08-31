@@ -1,31 +1,31 @@
-﻿
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BLTRDSModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="BLTRDSModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="BLTRDSModelStoreContainer">
-          <EntitySet Name="ACTIVE_INGREDIENT" EntityType="BLTRDSModel.Store.ACTIVE_INGREDIENT" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="ACTIVE_INGREDIENT_AI_CLASS" EntityType="BLTRDSModel.Store.ACTIVE_INGREDIENT_AI_CLASS" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="ACTIVE_INGREDIENT_PULA" EntityType="BLTRDSModel.Store.ACTIVE_INGREDIENT_PULA" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="AI_CLASS" EntityType="BLTRDSModel.Store.AI_CLASS" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="APPLICATION_METHOD" EntityType="BLTRDSModel.Store.APPLICATION_METHOD" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="CROP_USE" EntityType="BLTRDSModel.Store.CROP_USE" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="DIVISIONS" EntityType="BLTRDSModel.Store.DIVISIONS" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="EVENT" EntityType="BLTRDSModel.Store.EVENT" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="FORMULATION" EntityType="BLTRDSModel.Store.FORMULATION" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="LIMITATIONS" EntityType="BLTRDSModel.Store.LIMITATIONS" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="ORGANIZATION" EntityType="BLTRDSModel.Store.ORGANIZATION" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="PRODUCT" EntityType="BLTRDSModel.Store.PRODUCT" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="PRODUCT_ACTIVE_INGREDIENT" EntityType="BLTRDSModel.Store.PRODUCT_ACTIVE_INGREDIENT" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="PULA_LIMITATIONS" EntityType="BLTRDSModel.Store.PULA_LIMITATIONS" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="ROLE" EntityType="BLTRDSModel.Store.ROLE" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="SPECIES_ACTIVE_INGREDIENT_PULA" EntityType="BLTRDSModel.Store.SPECIES_ACTIVE_INGREDIENT_PULA" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="USER_" EntityType="BLTRDSModel.Store.USER_" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="VERSION" EntityType="BLTRDSModel.Store.VERSION" store:Type="Tables" Schema="BLTADMIN" />
-          <EntitySet Name="CONTRIBUTORPULAVIEW" EntityType="BLTRDSModel.Store.CONTRIBUTORPULAVIEW" store:Type="Views" Schema="BLTADMIN" />
-          <EntitySet Name="PULAVERSION" EntityType="BLTRDSModel.Store.PULAVERSION" store:Type="Views" store:Schema="BLTADMIN" store:Name="PULAVERSION">
+          <EntitySet Name="ACTIVE_INGREDIENT" EntityType="BLTRDSModel.Store.ACTIVE_INGREDIENT" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ACTIVE_INGREDIENT_AI_CLASS" EntityType="BLTRDSModel.Store.ACTIVE_INGREDIENT_AI_CLASS" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ACTIVE_INGREDIENT_PULA" EntityType="BLTRDSModel.Store.ACTIVE_INGREDIENT_PULA" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="AI_CLASS" EntityType="BLTRDSModel.Store.AI_CLASS" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="APPLICATION_METHOD" EntityType="BLTRDSModel.Store.APPLICATION_METHOD" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="CROP_USE" EntityType="BLTRDSModel.Store.CROP_USE" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DIVISIONS" EntityType="BLTRDSModel.Store.DIVISIONS" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT" EntityType="BLTRDSModel.Store.EVENT" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="FORMULATION" EntityType="BLTRDSModel.Store.FORMULATION" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="LIMITATIONS" EntityType="BLTRDSModel.Store.LIMITATIONS" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ORGANIZATION" EntityType="BLTRDSModel.Store.ORGANIZATION" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PRODUCT" EntityType="BLTRDSModel.Store.PRODUCT" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PRODUCT_ACTIVE_INGREDIENT" EntityType="BLTRDSModel.Store.PRODUCT_ACTIVE_INGREDIENT" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PULA_LIMITATIONS" EntityType="BLTRDSModel.Store.PULA_LIMITATIONS" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ROLE" EntityType="BLTRDSModel.Store.ROLE" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SPECIES_ACTIVE_INGREDIENT_PULA" EntityType="BLTRDSModel.Store.SPECIES_ACTIVE_INGREDIENT_PULA" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="USER_" EntityType="BLTRDSModel.Store.USER_" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="VERSION" EntityType="BLTRDSModel.Store.VERSION" store:Type="Tables" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="CONTRIBUTORPULAVIEW" EntityType="BLTRDSModel.Store.CONTRIBUTORPULAVIEW" store:Type="Views" Schema="BLTADMIN" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PULAVERSION" EntityType="BLTRDSModel.Store.PULAVERSION" store:Type="Views" store:Schema="BLTADMIN" store:Name="PULAVERSION" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "PULAVERSION"."PULA_ID" AS "PULA_ID", 
       "PULAVERSION"."PULA_SHAPE_ID" AS "PULA_SHAPE_ID", 
@@ -280,8 +280,8 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BLTRDSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="BLTRDSEntities" annotation:LazyLoadingEnabled="true">
+      <Schema Namespace="BLTRDSModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="BLTRDSEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
           <EntitySet Name="ACTIVE_INGREDIENT" EntityType="BLTRDSModel.ACTIVE_INGREDIENT" />
           <EntitySet Name="CROP_USE" EntityType="BLTRDSModel.CROP_USE" />
           <EntitySet Name="DIVISIONS" EntityType="BLTRDSModel.DIVISION" />
@@ -403,29 +403,29 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ACTIVE_INGREDIENT_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="None" />
+          <Property Name="ACTIVE_INGREDIENT_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="None" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="INGREDIENT_NAME" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
           <Property Name="PC_CODE" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
           <Property Name="CAS_NUMBER" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
           <Property Name="VERSION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONACTIVE_INGREDIENT" FromRole="ACTIVE_INGREDIENT" ToRole="VERSION" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
         </EntityType>
         <EntityType Name="CROP_USE">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="CROP_USE_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="None" />
+          <Property Name="CROP_USE_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="None" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="USE" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="VERSION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONCROP_USE" FromRole="CROP_USE" ToRole="VERSION" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
         </EntityType>
         <EntityType Name="DIVISION">
           <Key>
             <PropertyRef Name="DIVISION_ID" />
           </Key>
-          <Property Name="DIVISION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DIVISION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="DIVISION_NAME" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="USER_" Relationship="BLTRDSModel.DIVISIONUSER_" FromRole="DIVISION" ToRole="USER_" />
         </EntityType>
@@ -433,18 +433,18 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="LIMITATION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="None" />
+          <Property Name="LIMITATION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="None" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="CODE" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
           <Property Name="LIMITATION1" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="VERSION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONLIMITATION" FromRole="LIMITATION" ToRole="VERSION" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
         </EntityType>
         <EntityType Name="PRODUCT_ACTIVE_INGREDIENT">
           <Key>
             <PropertyRef Name="PRODUCT_ACTIVE_INGREDIENT_ID" />
           </Key>
-          <Property Name="PRODUCT_ACTIVE_INGREDIENT_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" Type="Decimal" />
+          <Property Name="PRODUCT_ACTIVE_INGREDIENT_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" Type="Decimal" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="PRODUCT_ID" Nullable="false" Precision="38" Scale="0" Type="Decimal" />
           <Property Name="ACTIVE_INGREDIENT_ID" Nullable="false" Precision="38" Scale="0" Type="Decimal" />
           <Property Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" Type="Decimal" />
@@ -454,7 +454,7 @@
           <Key>
             <PropertyRef Name="USER_ID" />
           </Key>
-          <Property Name="USER_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USER_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="USERNAME" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="EMAIL" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="PHONE" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
@@ -474,7 +474,7 @@
           <Key>
             <PropertyRef Name="VERSION_ID" />
           </Key>
-          <Property Name="VERSION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VERSION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <NavigationProperty Name="ACTIVE_INGREDIENT" Relationship="BLTRDSModel.VERSIONACTIVE_INGREDIENT" FromRole="VERSION" ToRole="ACTIVE_INGREDIENT" />
           <NavigationProperty Name="PRODUCT_ACTIVE_INGREDIENT" Relationship="BLTRDSModel.VERSIONPRODUCT_ACTIVE_INGREDIENT" FromRole="VERSION" ToRole="PRODUCT_ACTIVE_INGREDIENT" />
           <NavigationProperty Name="LIMITATIONs" Relationship="BLTRDSModel.VERSIONLIMITATION" FromRole="VERSION" ToRole="LIMITATION" />
@@ -583,11 +583,11 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Type="Decimal" Name="AI_CLASS_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="None" />
+          <Property Type="Decimal" Name="AI_CLASS_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="None" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="AI_CLASS_NAME" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONAI_CLASS" FromRole="AI_CLASS" ToRole="VERSION" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
         </EntityType>
         <Association Name="VERSIONAI_CLASS">
           <End Type="BLTRDSModel.VERSION" Role="VERSION" Multiplicity="1" />
@@ -667,7 +667,7 @@
           <Property Type="String" Name="PRODUCT_NAME" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.PRODUCTVERSION" FromRole="PRODUCT" ToRole="VERSION" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="PRODUCT_NAME_STATUS" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="PRODUCTVERSION">
@@ -694,7 +694,7 @@
           <Property Type="String" Name="INTERIM_PROPOSED_DECISION" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FOCUS_MEETING" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Decimal" Name="IS_PUBLISHED" Nullable="false" Precision="38" Scale="0" />
           <Property Type="DateTime" Name="EFFECTIVE_DATE" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONACTIVE_INGREDIENT_PULA" FromRole="ACTIVE_INGREDIENT_PULA" ToRole="VERSION" />
@@ -728,7 +728,7 @@
           <Key>
             <PropertyRef Name="SPECIES_ACTIVEINGREPULA_ID" />
           </Key>
-          <Property Type="Decimal" Name="SPECIES_ACTIVEINGREPULA_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="SPECIES_ACTIVEINGREPULA_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Decimal" Name="SPECIES_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="Decimal" Name="PULA_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
@@ -753,7 +753,7 @@
           <Property Type="Decimal" Name="APPLICATION_METHOD_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="String" Name="METHOD" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONAPPLICATION_METHOD" FromRole="APPLICATION_METHOD" ToRole="VERSION" />
         </EntityType>
         <EntityType Name="FORMULATION">
@@ -763,7 +763,7 @@
           <Property Type="Decimal" Name="FORMULATION_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="String" Name="FORM" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <NavigationProperty Name="VERSION" Relationship="BLTRDSModel.VERSIONFORMULATION" FromRole="FORMULATION" ToRole="VERSION" />
         </EntityType>
         <Association Name="VERSIONAPPLICATION_METHOD">
@@ -821,7 +821,7 @@
           <Key>
             <PropertyRef Name="EVENT_ID" />
           </Key>
-          <Property Type="Decimal" Name="EVENT_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="EVENT_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="NAME" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ACTIVE_INGREDIENT_PULA" Relationship="BLTRDSModel.EVENTACTIVE_INGREDIENT_PULA" FromRole="EVENT" ToRole="ACTIVE_INGREDIENT_PULA" />
         </EntityType>
@@ -841,7 +841,7 @@
           <Key>
             <PropertyRef Name="ACTIVE_INGREDIENT_AI_CLASS_ID" />
           </Key>
-          <Property Type="Decimal" Name="ACTIVE_INGREDIENT_AI_CLASS_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ACTIVE_INGREDIENT_AI_CLASS_ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Decimal" Name="ACTIVE_INGREDIENT_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="Decimal" Name="AI_CLASS_ID" Nullable="false" Precision="38" Scale="0" />
           <Property Type="Decimal" Name="VERSION_ID" Nullable="false" Precision="38" Scale="0" />
@@ -877,14 +877,14 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="COMMENTS" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>        
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BLTRDSModelStoreContainer" CdmEntityContainer="BLTRDSEntities">
           <EntitySetMapping Name="ACTIVE_INGREDIENT"><EntityTypeMapping TypeName="BLTRDSModel.ACTIVE_INGREDIENT"><MappingFragment StoreEntitySet="ACTIVE_INGREDIENT">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -1101,7 +1101,7 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
