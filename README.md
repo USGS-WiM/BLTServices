@@ -9,8 +9,8 @@ C# REST Services
 
 ## Authors
 
-* **[Tonia Roddick](https://cms.usgs.gov/users/troddickusgsgov)**  - *Lead Developer* - [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
-* **[Jeremy Newson](https://cms.usgs.gov/users/jknewsonusgsgov)** - *Developer* -  [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
+* **[Tonia Roddick](https://www.usgs.gov/staff-profiles/tonia-m-roddick)**  - *Lead Developer* - [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
+* **[Jeremy Newson](https://www.usgs.gov/staff-profiles/jeremy-k-newson)** - *Developer* -  [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
 
 ## License
 
